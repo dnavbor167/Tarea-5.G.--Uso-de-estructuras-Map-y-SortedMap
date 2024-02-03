@@ -22,6 +22,11 @@ public class Main {
         traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
         traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
         traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
+        traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
+        traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
+        traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
+        traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
+        traductor.guardarTraducciones(palabraEspañola(), palabraExtranjera());
         
         traductor.getTraductor().forEach((key, values) -> System.out.println("Español " + key + " Inglés " + values));
         
