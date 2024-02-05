@@ -24,21 +24,22 @@ public class LoteriaNacional {
     //Insertamos el constructor de lotería
     public LoteriaNacional() {
         Random r = new Random();
-        for (int i = 0; i < 1000; i++) {
+        //Hacemos premios aleatorios
+        ArrayList<Integer> premiosAleatorios = new ArrayList<>();
+        premiosAleatorios.add(0);
+        premiosAleatorios.add(100);
+        premiosAleatorios.add(1000);
+        premiosAleatorios.add(10000);
+        premiosAleatorios.add(100000);
+        premiosAleatorios.add(1000000);
+        
+        //Hacemos un while para que no pare hasta que sean 1000 registros
+        while (this.loteria.size() < 1000) {
             //Creamos la variable para guardar aquí el número de lotería aleatorio
             int numDecimo = r.nextInt(0, 100000);
             //Dependiendo del número le añadirá tantos ceros a la izquierda para 
             //que haya 5 posiciones
             String resultadoDecimo = String.format("%05d", numDecimo);
-
-            //Hacemos premios aleatorios
-            ArrayList<Integer> premiosAleatorios = new ArrayList<>();
-            premiosAleatorios.add(0);
-            premiosAleatorios.add(100);
-            premiosAleatorios.add(1000);
-            premiosAleatorios.add(10000);
-            premiosAleatorios.add(100000);
-            premiosAleatorios.add(1000000);
 
             //hacemos que elija entre los premios anteriores de forma aleatoria
             Integer indice = premiosAleatorios.get(r.nextInt(premiosAleatorios.size()));
